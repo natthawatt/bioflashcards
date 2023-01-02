@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}: Homepage {% endblock title %}
+
+{% block content %}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Bio Flashcards</h1>
+        <p class="lead text-muted">Biology is perhaps a fog-like obstacle among the complex labyrinths, but one way of light can lead us to our destination is ‘Bio Flashcards’.</p>
+        <p>
+          <a href="{% url 'members' %}" class="members">Members</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  {% endblock content %}
+

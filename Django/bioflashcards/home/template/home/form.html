@@ -1,0 +1,335 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Bio flashcards {% block title %}: Form & Result {% endblock title %}</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+
+    
+
+    
+
+<link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="{% static 'image/S__26664977.png' %}" sizes="180x180">
+<link rel="icon" href="{% static 'image/S__26664977.png' %}" sizes="32x32" type="image/png">
+<link rel="icon" href="{% static 'image/S__26664977.png' %}" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="{% static 'image/S__26664977.ico' %}">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(234,216,204,255);
+        border: solid rgba(129,182,190,255);
+        border-width: 5px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+          <h4 class="text-white">Form & Result</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="form" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Form & Result</strong>
+      </a>
+      </button>
+    </div>
+  </div>
+  </div>
+</header>
+
+<form id="my-form">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Remember?</th>
+    </tr>
+    <tr>
+      <td>Nucleus</td>
+      <td>
+        <input type="radio" name="remember-1" value="yes">Yes 
+        <input type="radio" name="remember-1" value="not">Not
+      </td>
+    </tr>
+    <tr>
+      <td>Mitochrondia</td>
+      <td>
+        <input type="radio" name="remember-2" value="yes">Yes
+        <input type="radio" name="remember-2" value="not">Not
+      </td>
+    </tr>
+    <tr>
+      <td>RER</td>
+      <td>
+        <input type="radio" name="remember-3" value="yes">Yes
+        <input type="radio" name="remember-3" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>SER</td>
+      <td>
+        <input type="radio" name="remember-4" value="yes">Yes
+        <input type="radio" name="remember-4" value="not">Not
+      </td>
+    </tr>
+      <tr>
+      <td>Ribosome</td>
+      <td>
+        <input type="radio" name="remember-5" value="yes">Yes
+        <input type="radio" name="remember-5" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Chloroplast</td>
+      <td>
+        <input type="radio" name="remember-6" value="yes">Yes
+        <input type="radio" name="remember-6" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Vacuole</td>
+      <td>
+        <input type="radio" name="remember-7" value="yes">Yes
+        <input type="radio" name="remember-7" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Golgi Body</td>
+      <td>
+        <input type="radio" name="remember-8" value="yes">Yes
+        <input type="radio" name="remember-8" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Lysosome</td>
+      <td>
+        <input type="radio" name="remember-9" value="yes">Yes
+        <input type="radio" name="remember-9" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Peroxisome</td>
+      <td>
+        <input type="radio" name="remember-10" value="yes">Yes
+        <input type="radio" name="remember-10" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Centriole</td>
+      <td>
+        <input type="radio" name="remember-11" value="yes">Yes
+        <input type="radio" name="remember-11" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Intermediate Filament</td>
+      <td>
+        <input type="radio" name="remember-12" value="yes">Yes
+        <input type="radio" name="remember-12" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Microfilamemt</td>
+      <td>
+        <input type="radio" name="remember-13" value="yes">Yes
+        <input type="radio" name="remember-13" value="not">Not
+      </td>
+    </tr>
+        <tr>
+      <td>Cell Membrane</td>
+      <td>
+        <input type="radio" name="remember-14" value="yes">Yes
+        <input type="radio" name="remember-14" value="not">Not
+      </td>
+    </tr>
+  </table>
+  <button type="submit">Submit</button>
+</form>
+<button id="show-image-button" style="display: none;">Download Image</button>
+<div id="image-container" style="display: block;">
+  <canvas id="myChart" width="400" height="200"></canvas>
+</div>
+
+
+<script>
+  document.getElementById('my-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var data = {
+      yes: 0,
+      not: 0
+    };
+    for (var i = 1; i <= 14; i++) {
+      var answer = document.querySelector(`input[name="remember-${i}"]:checked`);
+      if (answer) {
+        data[answer.value]++;
+      }
+    }
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Yes', 'Not'],
+        datasets: [{
+          label: 'Answers',
+          data: [data.yes, data.not],
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+  options: {
+    title: {
+      display: true,
+      fontSize: 18,
+      fontFamily: 'Arial',
+      text: 'Good job!' // default text
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+
+if (data.not > 0) {
+  chart.options.title.text = 'Not bad! Keep going, Our minimum threshold is 50%';
+}
+
+
+    document.getElementById('show-image-button').style.display = 'inline';
+    document.getElementById('image-container').style.display = 'block';
+  });
+
+
+   document.getElementById('show-image-button').addEventListener('click', function() {
+  // Generate the image and download it when the button is clicked
+  var image = document.getElementById('myChart').toDataURL('image/png');
+  var link = document.createElement('a');
+  link.download = 'chart.png';
+  link.href = image;
+  link.click();
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a class="back-to" href="{% url 'Cells' %}" >Back to flashcards</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  table {
+    border: 1px solid black; 
+    margin: 2% auto;
+    text-align: center;
+    border-radius: 10px;
+    width: 70%; 
+  }
+   button {
+     padding: 10px 20px;
+     background-color: #4CAF50;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: auto;
+     align-items: center; 
+   }
+  footer {
+    adding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+  }
+   
+  back-to {
+     padding: 10px 20px;
+     color: white;
+     border: none;
+     cursor: pointer;
+     display: flex;
+     margin: auto;
+    
+   }
