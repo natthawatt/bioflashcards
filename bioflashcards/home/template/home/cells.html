@@ -1,0 +1,437 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Bio flashcards {% block title %}: Cells {% endblock title %}</title>
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    
+
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="{% static 'image/S__26664977.png' %}" sizes="180x180">
+<link rel="icon" href="{% static 'image/S__26664977.png' %}" sizes="32x32" type="image/png">
+<link rel="icon" href="{% static 'image/S__26664977.png' %}" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+<link rel="icon" href="{% static 'image/S__26664977.ico' %}">
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.3/examples/carousel/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" >Bio Flashcards</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Homepage</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+
+   {% block content %}
+
+   {% endblock content %}
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Nucleus</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เป็นที่เก็บสารพันธุกรรม และเป็นศูนย์กลางที่ควบคุมการทำงานต่าง ๆ ภายในเซลล์</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Cell Membrane</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>กำหนดขอบเขตของเซลล์ สารเข้าและออก</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Ribosome</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เกี่ยวข้องกับการสร้างโปรตีน</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Rough Endoplasmic Reticulum (RER)</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>สร้างโปรตีน มี ribosome ติดอยู่ที่บริเวณผิวนอก</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Smooth Endoplasmic Reticulum (SER)</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>สังเคราะห์ไขมัน กำจัดสารพิษ</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Lysosome</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เกี่ยวข้องกับการย่อย</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Golgi Body</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เติม carbohydrate และน้ำตาลให้กับโปรตีนที่สร้างจาก RER และไขมันจาก SER</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Peroxisome</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>สลายกรดไขมันโมเลกุลยาว ๆ ในปฏิกิริยา oxidation</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Vacuole</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>บรรจุและสะสมสารต่าง ๆ เอาไว้ภายใน</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Microtubule</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>ประกอบด้วย Centriole ใช้แบ่งเซลล์ / Cilia ใช้ในการพัดโบก</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Mitochrondia</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เป็นแหล่งสร้างพลังงานของเซลล์</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Chloroplast</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>เกี่ยวข้องกับการ photosynthesis</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Intermediate Filament</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>ประกอบด้วย keratin (ราก ผม ขน) และเกี่ยวกับเซลล์ประสาท</p>
+  </div>
+</div>
+
+<div class="flipcard" onclick="flipcard()">
+  <div class="front">
+    <h2>Name</h2>
+    <p>Microfilament</p>
+  </div>
+  <div class="back">
+    <h2>Role</h2>
+    <p>การหดตัวของกล้ามเนื้อ / Ameboid movement / การไหลของ cytoplasm</p>
+  </div>
+</div>
+
+
+<a type="googleform" 
+        class="my-button" href="https://linktr.ee/bioflashcards">I finished!</a>
+
+<script>
+function flipcard(event) {
+  var flipcard = document.querySelector('.flipcard');
+  flipcard.classList.toggle('flipped');
+  event.preventDefault();
+}
+
+var flipcard = document.querySelector('.flipcard');
+flipcard.addEventListener('pointerdown', flipcard);
+flipcard.addEventListener('mousedown', flipcard);
+
+</script>
+
+<script>
+  const button = document.querySelector('.my-button');
+
+button.addEventListener('click', function() {
+});
+</script>
+
+
+
+
+<style>
+
+.flipcard {
+  perspective: 62.5rem;
+  width: 25.25rem;
+  height: 11.75rem;
+  margin: 20px auto; 
+  display: flex; 
+  border-radius: 8px;
+  align-items: center; 
+  position: center; 
+  cursor: pointer; 
+}
+
+.flipcard .front,
+.flipcard .back {
+  position: absolute; 
+  width: 90%; 
+  height: 100%; 
+  border-radius: 8px;
+  backface-visibility: hidden; 
+  transition: transform 0.6s ease-in-out; 
+  align-items: center;
+  text-align: center;
+
+
+}
+.flipcard .front {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: black;
+  z-index: 2;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+    margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flipcard .back {
+  background-color: #E8E8E8;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+    margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.flipcard:hover .front {
+  transform: rotateY(180deg);
+}
+
+.flipcard:hover .back {
+  transform: rotateY(0deg);
+
+
+}
+
+.my-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  align-items: center; 
+
+}
+
+ .flashcards {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  justify-content: center;
+  margin: 1pt;
+  align-items: center; 
+}
+
+ .pictures {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 1pt;
+}
+
+ .googleform {
+  padding: 10px 10px;
+  width: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  align-items: center; 
+ }
+
+
+
+
+</body>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="Cells">Back to top</a>
+    </p>
+  </div>
+</footer>
+
+
+    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
